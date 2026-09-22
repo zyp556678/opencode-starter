@@ -1,0 +1,39 @@
+{
+  "name": "opencode-launcher",
+  "version": "1.0.0",
+  "description": "Interactive terminal launcher for OpenCode with project memory and session management",
+  "main": "dist/index.cjs",
+  "bin": {
+    "ocl": "./bin/ocl.cjs",
+    "opencode-launcher": "./bin/ocl.cjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.cjs",
+    "test": "tsx test/verify.ts",
+    "typecheck": "tsc --noEmit",
+    "shortcut": "node scripts/create-shortcut.js",
+    "package": "node scripts/package-release.js"
+  },
+  "keywords": [
+    "opencode",
+    "launcher",
+    "tui",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "picocolors": "^1.1.1",
+    "string-width": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "resedit": "^3.1.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
